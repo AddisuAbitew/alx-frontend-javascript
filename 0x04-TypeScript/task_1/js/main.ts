@@ -15,8 +15,8 @@ interface printTeacherFunction {
     (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
-    return `${firstName.slice(0, 1)}. ${lastName}`;
+function printTeacher(firstName: string, lastName: string) {
+    return `${firstName}. ${lastName}`
 }
 
 interface StudentConstructor {
