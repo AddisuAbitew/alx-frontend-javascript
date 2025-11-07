@@ -45,7 +45,7 @@ const createEmployee = (salary: number | string): Director | Teacher => {
     return new Director();
 }
 
-function isDirector(employee: Director | Teacher): employee is Director {
+export function isDirector(employee: Director | Teacher): employee is Director {
     return employee instanceof Director;
 }
 
@@ -59,6 +59,10 @@ function executeWork(employee: Director | Teacher): string {
 
 type Subjects = 'Math' | 'History';
 
-function teachClass(todayClass: Subjects) {
-    return `Teaching ${todayClass}`;
+function teachClass(todayClass:Subjects) {
+    if (todayClass == 'History') {
+        return "Teaching History";
+    } else {
+        return "Teaching Math"
+    }
 }
